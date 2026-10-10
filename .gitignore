@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -14,8 +15,15 @@ node_modules/
 dist/
 dist-ssr/
 
-# Local environment files
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
 *.local
+
+# Firebase service account keys
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
 
 # Editor directories and files
 .vscode/*
@@ -27,3 +35,6 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+
+# Operating system files
+Thumbs.db

@@ -1,24 +1,26 @@
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import Profile from './components/Profile'
-import Projects from './components/Projects'
-import Photos from './components/Photos'
-import FeaturedArticles from './components/FeaturedArticles'
-import FeaturedTutorials from './components/FeaturedTutorials'
 import Footer from './components/Footer'
+
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Banner />
-      <Profile />
-      <Projects />
-      <Photos />
-      <FeaturedArticles />
-      <FeaturedTutorials />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 
