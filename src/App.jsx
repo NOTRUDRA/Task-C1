@@ -1,4 +1,4 @@
-
+import Post from './pages/Post'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
@@ -17,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/post" element={<Post />} />
       </Routes>
 
       <Footer />
